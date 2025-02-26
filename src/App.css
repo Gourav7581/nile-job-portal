@@ -1,38 +1,626 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Base Styles */
+.headerback {
+  background-color: rgb(2, 2, 48);
   display: flex;
   flex-direction: column;
+  height: 15vh;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.logo {
+  max-width: 12vw;
+  height: 12vh;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 14vh;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  font-size: 1.3em;
+  font-weight: 400;
+  gap: 30px;
+  margin-right: -4em;
+  list-style: none;
+  font-family: "arial-nova", Sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(206, 203, 203);
+}
+
+a:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Responsive Navbar */
+@media (max-width: 1024px) {
+  .nav {
+    font-size: 1.1em;
+    gap: 20px;
+    margin-right: 0;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 14vh;
+    left: 0;
+    background-color: rgb(2, 2, 48);
+    padding: 10px 0;
   }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 20vw;
+    height: auto;
+  }
+}
+
+.carousel-inner img {
+  height: 100vh;  
+  object-fit: cover; 
+}
+.infomaindiv{
+  padding: 70px;
+  color: white;
+}
+.infodiv{
+  background-color: rgb(2, 2, 48);
+  padding: 60px;
+  text-align: center;
+  border-radius: 15px;
+  width: 95%;
+  margin-left: 40px;
+
+  
+}
+.infotext1{
+  color: #dfd6d6;
+    font-family: "arial-nova", Sans-serif;
+    font-size: 33px;
+    font-weight: 400;
+    margin-top: -30px;
+
+}
+.infotext2{
+  color: #fff;
+    font-family: "arial-nova", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: .1px;
+    width: 74vw;
+    margin-left: 13px;
+    margin-top: 25px;
+}
+
+.welcomeimg{
+
+border: none;
+}
+
+
+.welh h2{
+  font-size: 1.8rem;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25em;
+    color: rgb(2, 2, 48);
+    margin-left: 0.6em;
+}
+.welt1{
+  margin: 30px 50px 0px 20px;
+  text-align: justify;
+    color: #333;
+    font-family: "arial-nova", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: .1px
+}
+
+.welt2{
+  margin: 30px 50px 30px 20px;
+  text-align: justify;
+    color: #333;
+    font-family: "arial-nova", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: .1px;
+
+}
+.welb2{
+  font-family: "arial-nova", Sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2em;
+    letter-spacing: .9px;
+    word-spacing: 1px;
+    color: #fff;
+    background-color: #110f32;
+    border-style: none;
+    border-radius: 30px 30px 30px 30px;
+    padding: 15px 30px 15px 30px;
+}
+.welb2:hover{
+  opacity: 0.6;
+}
+.pmain{
+  margin-top: 5em;
+}
+
+
+.porth{
+ 
+    text-align: center;
+}
+.porth h2{
+  color: #110f32;
+  font-size: 2.2em;
+  font-weight: 600;
+  font-family: "arial-nova", Sans-serif;
+  line-height: 1.25em;
+}
+.gallerydiv {
+  background-color: white;
+  margin-top: 4em;
+  box-shadow: 0px 1px 10px black;
+  
+}
+.ghead{
+  text-transform: uppercase;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  padding: 25px;
+  font-family: "arial-nova", Sans-serif;
+  display: flex;
+  gap: 20px; 
+  cursor: pointer;
+  color: #444;
+}
+.RadissonHotels1{
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 40px;
+  height: 45vh;
+ 
+  
+}
+
+
+.imgc {
+  position: relative;
+  overflow: hidden;
+}
+
+.Rimghover {
+  position: absolute;
+  bottom: -100%; 
+  left: 3%; 
+  width: 94%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "arial-nova", Sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  top: -30px;
+}
+
+.imgc:hover .Rimghover {
+  opacity: 1;
+  bottom: 0; 
+  height: 97%;
+}
+.igtext{
+  margin-top: 30px;
+}
+
+.ghead span.activegellerycss {
+  background: #333;
+    color: white;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin: 0 5px;
+    position: relative;
+    top: -10px;
+    font-family: "arial-nova", Sans-serif;
+
+    
+}
+
+.choosemain{
+  background-color: #efefef;
+  padding: 60px;
+}
+.choosemainhead{
+ justify-content: center;
+ align-content: center;
+ text-align: center;
+ 
+}
+
+.choosemain h2{
+  font-size: 2.2rem;
+    font-weight: 600;
+    font-family: "arial-nova", Sans-serif;
+    line-height: 1.25em
+    
+}
+.choosemaintext{
+  margin: 30px 100px 0px 100px;
+  text-align: center;
+    color: #333;
+    font-family: "arial-nova", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: .1px;
+}
+
+.chgalllogodiv{
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-content: center;
+}
+.chgalllogo{
+  width: 200px;
+  background-color: #333;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+.roundlogo{
+  padding: 30px;
+  background-color: #efefef;
+  width: 40px;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: -10px;
+}
+.cbulb{
+  width: 88px;
+  height: 100px;
+}
+
+
+
+/* Upcomming hotels */
+
+.ucbody{
+  width: 100%;
+  height: 80vh;
+  object-fit: contain;
+}
+.ucbodyimg{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.ucgallerymaindiv{
+  padding: 40px;
+}
+.ucgallerydiv{
+  padding: 10px;
+}
+.ucgallerydivhead{
+  margin-left: 20px;
+}
+.ucgallerydivhead h2{
+  color: #333;
+    font-family: "arial-nova", Sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+}
+.ucgallerydivtext{
+  color: #484848;
+    font-family: "arial-nova", Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: 20px;
+}
+
+.ucgalleryrow{
+  margin-left: 10px;
+  
+}
+.ucgallerydivimg{
+  width: 29vw;
+  height: 45vh;
+  background-color: #ebe3e3;
+  padding: 10px;
+}
+.ucgalleryimg{
+  width: 100%;
+  height: 100%;
+}
+
+/* Life At Nile */
+
+.lifebody{
+  width: 100vw;
+  height: 80vh;  
+  object-fit: cover;
+} 
+.lifebodyimg{
+  width: 100vw;
+  height: 80vh;
+  object-fit: inherit;
+
+}
+
+/* Findjobs */
+
+.findjobbody {
+  width: 100%;
+  height: 74vh;
+  overflow: hidden;  
+  background-image: url(./image/Fj1.jpg);
+  background-size: cover;
+  justify-content: center;
+  align-content: center;
+  padding: 40px;
+}
+.findjobbodyhead{
+  background-color: rgba(255, 255, 255, 0.4); /* White with 40% opacity */
+  padding: 30px;
+  width: 80%;
+  margin-left: 90px;
+
+}
+
+
+.jobsection1{
+  color: #1e293b;
+    font-weight: 600;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+       
+}
+.jobsection2{
+ 
+  text-align: left;
+  color: black;
+  font-family: "arial-nova", Sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 28px;
+  letter-spacing: .2px;
+}
+
+
+.findjobbodyimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+.findjobsection{
+  padding: 50px 30px;
+  background-color: #ebe3e3;
+  
+}
+.jobsection{
+  background-color: #fff;
+    box-shadow: 0px 1px 10px black;
+    height: 600vh;
+
+}
+
+
+.fjline{
+  color:#0949af;
+}
+
+.jobsection3{
+  padding: 40px;
+  width: 100%;
+}
+.jobsection4{
+display: flex;
+gap: 20px;
+
+}
+
+.dropdown .btn:hover{
+  border: 1px solid #0e54c4
+
+}
+.searchbutton{
+  cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color:#0e54c4;
+    color: white;
+    padding: 5px 55px 5px 55px;
+    height: 7vh;
+}
+.dropdown .btn {
+  position: relative;
+  width: 100%; 
+  padding-right: 30px; 
+  width: 25vw;
+  height: 7vh;
+  border: 1px solid #0e54c4;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+  text-align: start;
+  overflow: hidden;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.searchbutton:hover{
+  background-color:#0a44a1;
+}
+
+.heightderp .dropdown-menu {
+  max-height: 60vh;  
+  overflow-y: auto;   
+  border: 1px solid #ccc;
+}
+
+.dropdown-menu {
+  max-height: 60vh; 
+  overflow-y: auto;
+  width: 100%; 
+}
+
+
+.dropdown-menu li{
+  height: 10px;
+  padding: 8px 6px;
+  white-space: nowrap; 
+}
+li:hover{
+  color: #0a44a1;
+  cursor: pointer;
+
+}
+.jobsection5{
+  padding: 10px;
+  height: 30vh;
+}
+.jobsection5logo{
+  width: 15%;
+  height: 14vh;
+  object-fit: contain;
+  object-fit: cover;
+  align-content: center;
+  justify-content: center;
+  margin-left: 10px;
+  box-shadow: 0px 1px 10px black;
+
+}
+.jobsection5logoimg{
+  width: 120px;
+  height: 80%;
+  margin-left: -5px;
+}
+.fjline2{
+  margin-top: -15px;
+}
+
+
+.jobsection6 .guest{
+  font-family: "arial-nova" !important;
+  font-size: 25px ;
+  font-weight: 500;
+  margin-left: 30px;
+}
+
+.jobsection6 .subguset{
+  font-family: "arial-nova" !important;
+  font-size: 24px ;
+  font-weight: 500;
+  margin-left: 30px;
+  margin-top: -20px;
+  color: rgb(146, 141, 139);
+}
+.applynow{
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-image: linear-gradient(to left, rgb(39, 16, 243) , rgb(16, 5, 112));
+  color: white;
+  padding: 5px 0px 5px 10px;
+  margin-top: 15px;
+  margin-left: -10px;
+  font-size: 15px;
+  
+}
+.applynow svg{
+  font-size: 1.6em;
+  margin-top: -3px;
+  margin-left: -5px;
+}
+.Departmentsbutton{
+  width: 100%;
+  position: relative;
+  top: -10px;
+  height: 5.8vh;
+  border: none;
+  background: none;
+  text-align: start;
+}
+.Departmentsbutton:hover{
+  background-color: rgb(242, 242, 247);
+}
+.liline{
+  margin-top: 16px;
+}
+.positionlist{
+ position: relative;
+ top: 20px;
+ height: 20vh;
+}
+
+
+
+.nextnow {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+.nextnow.active {
+  background-color: #007bff;
+  color: white;
 }
