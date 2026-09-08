@@ -108,7 +108,7 @@ Special attention was given to long job titles, variable hotel logos, dropdown m
 ## Project Structure
 
 ```text
-jobportal/
+nile-job-portal/
 ├── public/
 │   ├── index.html
 │   └── manifest.json
@@ -135,8 +135,8 @@ jobportal/
 ### Installation
 
 ```bash
-git clone <your-repository-url>
-cd jobportal
+git clone https://github.com/Gourav7581/nile-job-portal.git
+cd nile-job-portal
 npm install
 ```
 
