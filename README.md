@@ -1,70 +1,197 @@
-# Getting Started with Create React App
+# NILE Hospitality Careers Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-REST_API-5A29E4?logo=axios&logoColor=white)
+![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
 
-## Available Scripts
+A responsive, API-powered careers portal designed for **NILE Hospitality**. The application brings employer branding, live hotel vacancies, job discovery and résumé submission together in a polished single-page experience.
 
-In the project directory, you can run:
+The project focuses on a real recruitment workflow—not just a static UI. Candidates can explore the organization, filter open roles by department and property, view career programs and submit an application from any device.
 
-### `npm start`
+## Highlights
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Live vacancies retrieved from the NILE Careers REST API
+- Department and hotel-location filters
+- Paginated job listings with hotel branding
+- Job-specific application navigation
+- Résumé upload and multipart form submission
+- Responsive off-canvas navigation for mobile devices
+- Dedicated pages for company information, culture, awards and career advice
+- Touch-friendly carousels for hotels, awards, employee stories and partner brands
+- Fully responsive layouts for desktop, tablet and mobile
+- Reusable navigation, footer, gallery, card and carousel components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Application Flow
 
-### `npm test`
+```text
+Explore NILE
+     │
+     ▼
+Browse and filter vacancies ──► Select a position
+                                      │
+                                      ▼
+                              Complete application
+                                      │
+                                      ▼
+                               Upload résumé
+                                      │
+                                      ▼
+                            Submit to Careers API
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pages
 
-### `npm run build`
+| Route | Purpose |
+| --- | --- |
+| `/` | Careers landing page, hotel portfolio and employer value proposition |
+| `/about` | NILE Hospitality story, values and culture |
+| `/findjobs` | API-driven vacancy search, filters and pagination |
+| `/applynow` | Candidate details and résumé submission form |
+| `/uchotels` | Responsive showcase of upcoming hotel properties |
+| `/careeradvice` | Leadership programs, internships and career paths |
+| `/awards` | Awards, employee recognition and brand partnerships |
+| `/lifeatnile` | Workplace culture and employee experiences |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React 19** — component-based user interface
+- **React Router** — client-side navigation
+- **JavaScript (ES6+)** — application logic and asynchronous workflows
+- **Bootstrap / React Bootstrap** — responsive layout and off-canvas navigation
+- **Custom CSS** — brand styling and device-specific responsive design
 
-### `npm run eject`
+### Data and UI
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Axios and Fetch API** — vacancy retrieval and form submission
+- **Swiper** — touch-enabled hotel carousel
+- **React Slick** — awards, stories and brand sliders
+- **Font Awesome / React Icons** — interface and social icons
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Quality and Tooling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Create React App / React Scripts** — development and production builds
+- **React Testing Library** — component smoke tests
+- **Web Vitals** — performance measurement support
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## API Integration
 
-## Learn More
+The vacancy experience is connected to the NILE Careers API hosted on Azure.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```text
+Base URL
+https://hotelopsmasterapi.azurewebsites.net/API/NileCareersAPI
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Endpoint | Usage |
+| --- | --- |
+| `/DepartmentList` | Retrieves available job departments |
+| `/LocationList` | Retrieves hotel/property locations |
+| `/OpenPositionList` | Retrieves current vacancies |
+| `/PostResume` | Accepts candidate details and résumé files |
 
-### Code Splitting
+API configuration and request functions are separated into the `src/Service Api` directory so that data access stays independent from page components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Responsive Design
 
-### Analyzing the Bundle Size
+The portal is designed across three main experiences:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Desktop:** full navigation, multi-column cards and vertical supporting carousels
+- **Tablet:** reduced grids, responsive typography and an off-canvas menu
+- **Mobile:** single-column content, touch-friendly controls, horizontal sliders and stacked application forms
 
-### Making a Progressive Web App
+Special attention was given to long job titles, variable hotel logos, dropdown menus, image aspect ratios and content-heavy sections that commonly break on smaller screens.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Project Structure
 
-### Advanced Configuration
+```text
+jobportal/
+├── public/
+│   ├── index.html
+│   └── manifest.json
+├── src/
+│   ├── component/          # Shared UI, forms, cards and carousels
+│   ├── image/              # Local hotel and brand assets
+│   ├── pages/              # Route-level page components
+│   ├── router/             # Central route configuration
+│   ├── Service Api/        # Axios client, endpoints and API functions
+│   ├── App.css             # Global and responsive styling
+│   ├── App.test.js         # Component smoke tests
+│   └── index.js            # Application entry point
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Getting Started
 
-### Deployment
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Node.js 18 or later
+- npm 9 or later
 
-### `npm run build` fails to minify
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone <your-repository-url>
+cd jobportal
+npm install
+```
+
+### Run locally
+
+```bash
+npm start
+```
+
+The development server opens at [http://localhost:3000](http://localhost:3000).
+
+### Run tests
+
+```bash
+npm test -- --watchAll=false
+```
+
+### Create a production build
+
+```bash
+npm run build
+```
+
+The optimized deployment bundle is generated in the `build` directory.
+
+## Engineering Decisions
+
+- **Service layer separation:** API URLs and request functions are kept outside UI components.
+- **Reusable site shell:** navigation and footer components provide consistent behavior across routes.
+- **Progressive responsive layouts:** content is reorganized—not simply scaled down—on smaller screens.
+- **Local visual assets:** important brand imagery is bundled with the application to avoid fragile external dependencies.
+- **Accessible controls:** navigation, carousel controls, social links and images include descriptive labels.
+- **Production validation:** the project supports optimized builds and component-level smoke tests.
+
+## Key Challenges Solved
+
+1. Displaying logos with different dimensions without stretching or breaking job-card alignment.
+2. Converting desktop-heavy recruitment content into readable mobile layouts.
+3. Supporting vertical desktop carousels and swipe-friendly mobile carousels.
+4. Managing multiple asynchronous data sources for departments, locations and positions.
+5. Sending applicant data and résumé files using `multipart/form-data`.
+6. Preserving consistent navigation across content-heavy pages and screen sizes.
+
+## Future Improvements
+
+- Add dedicated job-detail API integration before application submission
+- Introduce loading skeletons and richer empty/error states
+- Add form validation with file type and size checks
+- Add end-to-end tests for job search and application flows
+- Move API configuration to environment variables
+- Add search-friendly metadata and structured job-posting data
+- Introduce an administrator dashboard for vacancy management
+
+## Author
+
+Developed as a portfolio project demonstrating responsive frontend engineering, REST API integration, reusable React architecture and real-world recruitment workflows.
+
+If this project helped you understand my work, consider giving the repository a ⭐.

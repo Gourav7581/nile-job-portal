@@ -11,7 +11,7 @@ const Welcome = () => {
             <img src={welcome} alt='welcome' className='welcomeimg'/>
           </div>
 
-          <div className='col-6'>
+          <div className='col-6 welcomesection2'>
 
            <div className='welh'>
            <h2> WELCOME TO CAREERS AT NITE </h2>

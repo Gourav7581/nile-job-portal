@@ -1,43 +1,48 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
-import "../App.css";
-import logo from '../image/logo.png';
-import NavItems from './Navitem';
+import { NavLink, Link } from "react-router-dom";
+import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "../image/logo.png";
+import NavItems from "./Navitem";
 
-
-export default function Navbar() {
-  
-
+export default function NavigationBar() {
   return (
     <>
-      
-    
-      <header className="header-area header-sticky headerback">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <nav className="main-nav">
-               
-                <Link to="/" >
-                  <img src={logo} alt="Logo" className="logo"/>
-                </Link>
+      <Navbar expand="xl" className="headerback" variant="dark" sticky="top" collapseOnSelect>
+        <Container fluid="xl">
+          {/* Logo */}
+          <Navbar.Brand as={Link} to="/">
+            <img src={logo} alt="Logo" className="logo" />
+          </Navbar.Brand>
 
-                <ul className="nav">
-                  
-                  {NavItems.map((item, index) => (
-                    <li key={index}>
-                      <Link to={item.path}>{item.Name}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-              <Outlet />
-            </div>
-          </div>
-        </div>
-      </header>
+          {/* Toggle Button */}
+          <Navbar.Toggle aria-controls="nile-mobile-menu" aria-label="Open navigation menu" />
+
+          {/* Navbar Items */}
+          <Navbar.Offcanvas id="nile-mobile-menu" aria-labelledby="nile-mobile-menu-title" placement="end" responsive="xl">
+            <Offcanvas.Header closeButton closeVariant="white">
+              <Offcanvas.Title id="nile-mobile-menu-title">
+                <img src={logo} alt="NILE Hospitality" className="drawer-logo" />
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="ms-auto">
+                {NavItems.map((item) => (
+                  <Nav.Link
+                    as={NavLink}
+                    to={item.path}
+                    key={item.path}
+                    end={item.path === "/"}
+                    className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+                  >
+                    {item.Name}
+                  </Nav.Link>
+                ))}
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
     </>
   );
 }
-
-

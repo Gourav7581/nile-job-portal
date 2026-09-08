@@ -7,6 +7,7 @@ import Ucg3 from '../image/Ucg3.jpeg'
 import Ucg4 from '../image/Wimg5.jpg'
 import Ucg5 from '../image/Ucg5.jpg'
 import Ucg6 from '../image/Ucg6.jpg'
+import Footer from '../component/Footer'
 const Uchotels = () => {
   return (
     
@@ -17,7 +18,7 @@ const Uchotels = () => {
       </div>
 
 
-      <div className='containter-fluide  ucgallerymaindiv'>
+      <main className='ucgallerymaindiv'>
 
         <div className=' ucgallerydiv'>
 
@@ -33,28 +34,28 @@ const Uchotels = () => {
            <div className='container-fluide  ucgallery'>
             <div className='row ucgalleryrow'>
 
-               <div className='col-4 mx-2 my-2 ucgallerydivimg'>
-                <img src={Ucg1} alt='ucg1' className='ucgalleryimg'/>
+               <div className='ucgallerydivimg'>
+                <img src={Ucg1} alt='Upcoming NILE hotel room' className='ucgalleryimg'/>
                </div>
-               <div className='col-4 mx-2 my-2 ucgallerydivimg'>
-               <img src={Ucg2} alt='ucg2' className='ucgalleryimg'/>
+               <div className='ucgallerydivimg'>
+               <img src={Ucg2} alt='Upcoming NILE hotel exterior' className='ucgalleryimg'/>
 
                </div>
-               <div className='col-4 mx-2  my-2 ucgallerydivimg'>
-               <img src={Ucg3} alt='ucg3' className='ucgalleryimg'/>
+               <div className='ucgallerydivimg'>
+               <img src={Ucg3} alt='Upcoming NILE hotel interior' className='ucgalleryimg'/>
 
                </div>
                
-               <div className='col-4 mx-2 ucgallerydivimg'>
-               <img src={Ucg4} alt='ucg1' className='ucgalleryimg'/>
+               <div className='ucgallerydivimg'>
+               <img src={Ucg4} alt='Upcoming NILE hotel property' className='ucgalleryimg'/>
 
                </div>
-               <div className='col-4 mx-2 ucgallerydivimg'>
-               <img src={Ucg5} alt='ucg1' className='ucgalleryimg'/>
+               <div className='ucgallerydivimg'>
+               <img src={Ucg5} alt='Upcoming NILE hotel suite' className='ucgalleryimg'/>
 
                </div>
-               <div className='col-4 mx-2 ucgallerydivimg'>
-               <img src={Ucg6} alt='ucg1' className='ucgalleryimg'/>
+               <div className='ucgallerydivimg'>
+               <img src={Ucg6} alt='Upcoming NILE hotel accommodation' className='ucgalleryimg'/>
 
                </div>
               
@@ -64,8 +65,9 @@ const Uchotels = () => {
 
 
           </div>
-      </div>
+      </main>
       
+      <Footer/>
     </div>
   )
 }
