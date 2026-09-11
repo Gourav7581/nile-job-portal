@@ -57,17 +57,17 @@ const Footer = () => {
               <div class="elementor-widget-container fontsection3"> <h3 class="elementor-heading-title elementor-size-default">Connect With Us</h3> </div>
 
               <div className="social-icons footericon" style={{ fontSize: "1.8rem", display: "flex", gap: "10px" }}>
-                <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Furl%3Dhttps%3A%2F%2Fcareersatnile.com%2Fjobshare.php%2Fguest-service-associate--radisson-hotel-kandla-2974" className="icons linkdin" target="_self">
+                <a href="https://www.linkedin.com/in/gourav-rathi-3bb29328b?utm_source=share_via&utm_content=profile&utm_medium=member_android" className="icons linkdin" target="_self">
                   <FaLinkedinIn
                     className="icon" />
                 </a>
 
-                <a href="https://www.facebook.com/login.php?skip_api_login=1&amp;api_key=966242223397117&amp;signed_next=1&amp;next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%3A%2F%2Fcareersatnile.com%2Fjobshare.php%2Fguest-service-associate--radisson-hotel-kandla-2974&amp;cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&amp;display=popup&amp;locale=en_GB" className="icons facebook">
+                <a href="https://www.facebook.com/gourav.rathi.1253" className="icons facebook">
                   <FaFacebookF className="icon mx-3" />
                 </a>
 
 
-                <a href="https://instagram.com/nilehospitality/" rel="noreferrer" target="_blank" title="Instagram">
+                <a href="https://www.instagram.com/gouravrathi53?stkn=MXIzMnUwNGJucTlxbA==" rel="noreferrer" target="_blank" title="Instagram">
                   <FaInstagram className="icon" />
 
                 </a>
